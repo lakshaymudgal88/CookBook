@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".Register">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@drawable/sign_in_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelines_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="349dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelines_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="349dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/t_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:text="Let's Cook Together"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guidelines_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/t_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sign in"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/guidelines_1"
+            app:layout_constraintTop_toBottomOf="@+id/t_1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColorHint="@android:color/white"
+            app:boxStrokeColor="@android:color/white"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:counterTextColor="@android:color/white"
+            app:endIconMode="clear_text"
+            app:endIconTint="@android:color/white"
+            app:hintTextColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@id/guidelines_2"
+            app:layout_constraintStart_toStartOf="@id/guidelines_1"
+            app:layout_constraintTop_toBottomOf="@+id/t_2"
+            app:startIconDrawable="@drawable/ic_account"
+            app:startIconTint="@android:color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_et_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="User Name"
+                android:inputType="text"
+                android:textColor="@android:color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@android:color/white"
+            app:boxStrokeColor="@android:color/white"
+            app:endIconMode="clear_text"
+            app:endIconTint="@android:color/white"
+            app:counterEnabled="true"
+            app:counterMaxLength="16"
+            app:hintTextColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@id/guidelines_2"
+            app:layout_constraintStart_toStartOf="@id/guidelines_1"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_name"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="@android:color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_et_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Password"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/sign_up_btn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginVertical="50dp"
+            android:background="@drawable/button_bg"
+            android:elevation="12dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelines_2"
+            app:layout_constraintStart_toStartOf="@id/guidelines_1"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_password" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="loader.json"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c_1"
+        android:layout_marginVertical="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

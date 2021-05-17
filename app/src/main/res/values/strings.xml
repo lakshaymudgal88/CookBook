@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Cook Book</string>
+    <string name="title_activity_description_recipes">DescriptionRecipes</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_recipe_des">RecipeDes</string>
+    <string name="app_id">ii40JTGGyZUFY0PACxpG56piVNOJFa1MYQEwL6ga</string>
+    <string name="client_key">sd9M4pd21eOvPeC567cyP9jkydW3hOyfLMDDqwO3</string>
+    <string name="server_url">https://parseapi.back4app.com/</string>
+</resources>
